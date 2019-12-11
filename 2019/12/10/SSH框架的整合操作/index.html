@@ -8,16 +8,20 @@
   <link rel="dns-prefetch" href="https://yoursite.com">
   <title>SSH框架的整合操作 | LIULEI的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本篇文章记录SSH框架的操作导入JAR包Hibernate框架的jar包hibernate框架导入十个jar包">
+  <meta name="description" content="本篇文章记录SSH框架的操作导入JAR包总共需要导入的jar包共计41个 分别为hibernate框架jar包，mysql数据库连接包，struts2框架包，以及spring框架包。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSH框架的整合操作">
 <meta property="og:url" content="https:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;SSH%E6%A1%86%E6%9E%B6%E7%9A%84%E6%95%B4%E5%90%88%E6%93%8D%E4%BD%9C&#x2F;index.html">
 <meta property="og:site_name" content="LIULEI的个人博客">
-<meta property="og:description" content="本篇文章记录SSH框架的操作导入JAR包Hibernate框架的jar包hibernate框架导入十个jar包">
+<meta property="og:description" content="本篇文章记录SSH框架的操作导入JAR包总共需要导入的jar包共计41个 分别为hibernate框架jar包，mysql数据库连接包，struts2框架包，以及spring框架包。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;first&#x2F;1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;first&#x2F;2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;first&#x2F;3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;first&#x2F;4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;yoursite.com&#x2F;assets&#x2F;first&#x2F;5.png">
 <meta property="article:published_time" content="2019-12-10T14:03:33.000Z">
-<meta property="article:modified_time" content="2019-12-10T15:51:57.272Z">
+<meta property="article:modified_time" content="2019-12-11T11:02:13.126Z">
 <meta property="article:author" content="LIULEI">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -73,10 +77,6 @@
     		
     			
     			<font style="color:#111111"><b><a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a></b></font>
-    			
-            
-    			
-    			<font style="color:#111111"><b><a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a></b></font>
     			
             
     			
@@ -176,9 +176,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="本篇文章记录SSH框架的操作"><a href="#本篇文章记录SSH框架的操作" class="headerlink" title="本篇文章记录SSH框架的操作"></a>本篇文章记录SSH框架的操作</h1><h2 id="导入JAR包"><a href="#导入JAR包" class="headerlink" title="导入JAR包"></a>导入JAR包</h2><h3 id="Hibernate框架的jar包"><a href="#Hibernate框架的jar包" class="headerlink" title="Hibernate框架的jar包"></a>Hibernate框架的jar包</h3><p>hibernate框架导入十个jar包<br><img src="/assets/first/1.png" alt="hibernate框架需要的jar包"></p>
+        <h1 id="本篇文章记录SSH框架的操作"><a href="#本篇文章记录SSH框架的操作" class="headerlink" title="本篇文章记录SSH框架的操作"></a>本篇文章记录SSH框架的操作</h1><h2 id="导入JAR包"><a href="#导入JAR包" class="headerlink" title="导入JAR包"></a>导入JAR包</h2><p>总共需要导入的jar包共计41个 分别为hibernate框架jar包，mysql数据库连接包，struts2框架包，以及spring框架<br>包。</p>
 <a id="more"></a>
-<p>测试测试测试测试测试sdhfdf<br>受到德国<br>士大夫地方结果</p>
+<blockquote>
+<p>这是hibernate 以及mysql需要的jar<br><img src="/assets/first/1.png" alt="hibernate框架需要的jar包"><br>这是struts2需要的jar<br><img src="/assets/first/2.png" alt="struts2"><br>这是spring需要的jar以及标签库jar:jstl stander<br><img src="/assets/first/3.png" alt=""></p>
+</blockquote>
+<h2 id="配置spring-struts2-以及-hibernate"><a href="#配置spring-struts2-以及-hibernate" class="headerlink" title="配置spring struts2 以及 hibernate"></a>配置spring struts2 以及 hibernate</h2><h3 id="配置spring"><a href="#配置spring" class="headerlink" title="配置spring"></a>配置spring</h3><blockquote>
+<p>配置spring的xml文件，在web动态项目src文件夹下新建一个名为applicationContext.xml的文件，第一页新建一个<br>beans 的根元素标签，接着在design单击右键beans的标签点击edit命名空间导入约束，先导入一个xsi，接着导入<br>四个xsd文件 分别是 aop,congtext,tx，beans，在导入beans时prefix默认为空，其余都以名称写入prefix。<br>成功后如下<br><img src="/assets/first/4.png" alt=""><br>接着在web.xml下配置监听器让spring容器随web的启动而创建<br><img src="/assets/first/5.png" alt=""><br>ContextLoaderListener源码在springweb包下</p>
+<blockquote>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"> &lt;listener&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;&#x2F;listener-class&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;listener&gt;  	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	&lt;context-param&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"> 	&lt;param-name&gt;contextConfigLocation&lt;&#x2F;param-name&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line"> 	&lt;param-value&gt;classpath:applicationContext.xml&lt;&#x2F;param-value&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"> &lt;&#x2F;context-param&gt;</span></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<h3 id="配置struts2"><a href="#配置struts2" class="headerlink" title="配置struts2"></a>配置struts2</h3><blockquote>
+<p>同样在src文件夹下新建struts.xml的配置文件，导入约束。<br>在struts.xml中添加spring对struts框架action的管理 <code>&lt;constant name=&quot;struts.objectFactory&quot; value=&quot;spring&quot;&gt;&lt;/constant&gt;</code><br>后在下方代码中 action标签的class属性中可直接写spring中添加的action bean标签的name值 不用再写全路径</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE struts PUBLIC</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&quot;-&#x2F;&#x2F;Apache Software Foundation&#x2F;&#x2F;DTD Struts Configuration 2.3&#x2F;&#x2F;EN&quot;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&quot;http:&#x2F;&#x2F;struts.apache.org&#x2F;dtds&#x2F;struts-2.3.dtd&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&lt;struts&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&lt;package name&#x3D;&quot;userAction&quot; extends&#x3D;&quot;struts-default&quot; namespace&#x3D;&quot;&#x2F;&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">	&lt;action name&#x3D;&quot;useraction_*&quot; class&#x3D;&quot;&quot; method&#x3D;&quot;&#123;1&#125;&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">		&lt;result name&#x3D;&quot;success&quot;&gt;&#x2F;jsp&lt;&#x2F;result&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	&lt;&#x2F;action&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;package&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;struts&gt;</span></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="配置applicationContext-xml中sessionFactory-c3p0连接池管理"><a href="#配置applicationContext-xml中sessionFactory-c3p0连接池管理" class="headerlink" title="配置applicationContext.xml中sessionFactory c3p0连接池管理"></a>配置applicationContext.xml中sessionFactory c3p0连接池管理</h2><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!-- 将SessionFactory配置 --&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">	&lt;bean name&#x3D;&quot;sessionFactory&quot; class&#x3D;&quot;org.springframework.orm.hibernate5.LocalSessionFactoryBean&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;dataSource&quot; ref&#x3D;&quot;dataSource&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;hibernateProperties&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">			&lt;props&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&lt;!-- 			注释的代码块 此内容已在c3p0中配置</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">	&lt;prop key&#x3D;&quot;hibernate.connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">	&lt;prop key&#x3D;&quot;hibernate.connection.url&quot;&gt;jdbc:mysql:&#x2F;&#x2F;&#x2F;hibernate_v1&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">	&lt;prop key&#x3D;&quot;hibernate.connection.username&quot;&gt;root&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">	&lt;prop key&#x3D;&quot;hibernate.connection.password&quot;&gt;root&lt;&#x2F;prop&gt; </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">--&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">			&lt;prop key&#x3D;&quot;hibernate.dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">			&lt;prop key&#x3D;&quot;hhibernate.show_sql&quot;&gt;true&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">			&lt;prop key&#x3D;&quot;hibernate.format_sql&quot;&gt;true&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">			&lt;prop key&#x3D;&quot;hibernate.hbm2ddl.auto&quot;&gt;update&lt;&#x2F;prop&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">			&lt;&#x2F;props&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">		&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;mappingDirectoryLocations&quot; value&#x3D;&quot;classpath:my&#x2F;itworks&#x2F;domain&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">	&lt;&#x2F;bean&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">	&lt;context:property-placeholder location&#x3D;&quot;classpath:db.properties&quot; &#x2F;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line">	&lt;bean name&#x3D;&quot;dataSource&quot; class&#x3D;&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;jdbcUrl&quot; value&#x3D;&quot;$&#123;jdbc.jdbcUrl&#125;&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;driverClass&quot; value&#x3D;&quot;$&#123;jdbc.driverClass&#125;&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;user&quot; value&#x3D;&quot;$&#123;jdbc.user&#125;&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">		&lt;property name&#x3D;&quot;password&quot; value&#x3D;&quot;$&#123;jdbc.password&#125;&quot;&gt;&lt;&#x2F;property&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">	&lt;&#x2F;bean&gt;</span></pre></td></tr></table></figure>
+</blockquote>
 
       
 
@@ -331,11 +346,12 @@
     		&copy; 2019 LIULEI
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">BLOG</a>  WRITE BY <a href="https://github.com/Eestwoods" target="_blank">LIULEI</a>
       	</div>
     </div>
   </div>
 </footer>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -372,25 +388,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -457,38 +465,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-        <ul class="search-ul">
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
-        </ul>
-  		
-    	</section>
     
 
     
